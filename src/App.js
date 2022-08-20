@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Container from "react-bootstrap/Container"
 import Navigation from "./components/Navigation"
@@ -7,7 +7,7 @@ import About from "./components/About"
 import Work from "./components/Work"
 import Contact from "./components/Contact"
 import Resume from "./components/Resume"
-// import Footer from "./components/Footer"
+import Footer from "./components/Footer"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -26,7 +26,7 @@ function App() {
           </Routes>
         </Router>
       </Container>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
