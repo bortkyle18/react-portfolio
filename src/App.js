@@ -16,7 +16,7 @@ function App() {
     <div>
       <Navigation />
       <Container style={{ paddingTop: "20px" }}>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>
           <Routes>
             <Route path="/react-portfolio/" element={<Home />} />
             <Route path="/react-portfolio/About" element={<About />} />
