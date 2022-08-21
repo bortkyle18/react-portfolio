@@ -18,11 +18,11 @@ function App() {
       <Container style={{ paddingTop: "20px" }}>
         <Router>
           <Routes>
-            <Route path="/react-portfolio/" element={<Home />} />
-            <Route path="/react-portfolio/About" element={<About />} />
-            <Route path="/react-portfolio/Work" element={<Work />} />
-            <Route path="/react-portfolio/Contact" element={<Contact />} />
-            <Route path="/react-portfolio//Resume" element={<Resume />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Work" element={<Work />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Resume" element={<Resume />} />
           </Routes>
         </Router>
       </Container>
