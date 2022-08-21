@@ -56,6 +56,35 @@ nav:hover {
   opacity: .95;
 }
 
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0 2vw;
+  color: var(--secondary-color);
+  font-size: 3.5vw;
+}
+
+.home a {
+  padding-left: 0;
+  font-size: 4.25vw;
+}
+
+nav a:hover {
+  color: var(--tertiary-color);
+}
+
+.navActive {
+  color: var(--secondary);
+}
+
 
 /* Home  */
 .hero-jumbotron {
@@ -175,9 +204,9 @@ nav:hover {
 #travelot, #note-taker, #social-networking-nosql, #employee-tracker, #run-buddy {
   background-position: top;
   background-size: cover;
-  margin: 2vw;
-  width: 80vw;
-  height: 30vw;
+  margin-top: 6vw;
+  width: 100vw;
+  height: 50vw;
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +270,6 @@ nav:hover {
 }
 
 #travelot {
-  width: 80vw;
   background-image: url(./assets/images/travelot.png);
 }
 
@@ -258,6 +286,7 @@ nav:hover {
 }
 
 #run-buddy {
+  margin-bottom: 4vw;
   background-image: url(./assets/images/run-buddy.png);
 }
 
@@ -317,26 +346,15 @@ form textarea {
   text-align: center;
 }
 
-#formName {
+#formName, #formEmail, #formMessage {
   margin: 1vw;
   text-align: center;
   width: 100%;
-}
-
-#formEmail {
-  margin: 1vw;
-  text-align: center;
-  width: 100%;
-}
-
-#formMessage {
-  margin: 1vw;
-  text-align: center;
-  width: 100%;
+  font-size: 4vw;
 }
 
 form button {
-  margin: 1vw 0 4vw 0;
+  margin: 1vw 0 2vw 0;
   color: var(--secondary-color);
   background-color: var(--quaternary-color);
 }
@@ -377,8 +395,13 @@ form button:hover {
 /* MEDIA QUERY */
 @media screen and (min-width: 600px) {
   /* Nav */
-  header a {
-      font-size: 2vw;
+  nav a {
+    padding: 1.5vw;
+    font-size:2vw;
+  }
+
+  .home a {
+    font-size: 3.5vw;
   }
 
 
@@ -435,21 +458,30 @@ form button:hover {
   }
 
   .sampleText a {
-      font-size: 1.5vw;
+      font-size: 2.5vw;
       padding: 0 1vw;
   }
 
   .sampleText p {
-      font-size: 1.2vw;
+      font-size: 1.75vw;
   }
 
   #travelot, #note-taker, #social-networking-nosql, #employee-tracker, #run-buddy {
-      width: 30vw;
-      height: 15vw;
+      width: 47%;
+      height: 30vw;
   }
 
   #travelot {
-      width: 64vw;
+      width: 100vw;
+  }
+
+  #note-taker {
+    margin-right: 4vw;
+  }
+
+  #employee-tracker {
+    
+    margin-right: 4vw;
   }
 
   .gitLink img {
@@ -459,6 +491,10 @@ form button:hover {
 
 
   /* Contact Me */
+  #formName, #formEmail, #formMessage {
+    font-size: 2.5vw;
+  }
+
   #linkedin {
     padding: 4vw 4vw 4vw 0;
   }
@@ -488,12 +524,12 @@ form button:hover {
 /* MEDIA QUERY */
 @media screen and (min-width: 1100px) {
   /* Nav */
-  header {
-      justify-content: end;
+  nav a {
+    font-size:1.25vw;
   }
 
-  header a {
-      font-size: 1.5vw;
+  .home a {
+    font-size: 2vw;
   }
 
 
@@ -536,24 +572,17 @@ form button:hover {
       font-size: 4vw;
   }
 
-  .sampleText a {
-      font-size: 1.75vw;
-  }
-
-  .sampleText p {
-      font-size: 1.25vw;
-  }
-
   #travelot, #note-taker, #social-networking-nosql, #employee-tracker, #run-buddy {
-      height: 10vw;
-  }
-
-  #travelot {
-      height: 13vw;
+      height: 20vw;
   }
 
 
   /* Contact Me */
+  #formName, #formEmail, #formMessage {
+    margin: 0;
+    font-size: 2vw;
+  }
+
   form input {
     width: 20vw;
   }

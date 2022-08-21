@@ -1,5 +1,5 @@
 import './index.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import React, { useState } from 'react';
 import Container from "react-bootstrap/Container"
 import Navigation from "./components/Navigation"
 import Home from "./components/Home"
@@ -12,19 +12,52 @@ import Footer from "./components/Footer"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
+  const [homeSelected, setHomeSelected] = useState(true);
+  const [aboutSelected, setAboutSelected] = useState(false);
+  const [workSelected, setWorkSelected] = useState(false);
+  const [contactSelected, setContactSelected] = useState(false);
+  const [resumeSelected, setResumeSelected] = useState(false);
+
+
   return (
     <div>
-      <Navigation />
+      <Navigation 
+      homeSelected={homeSelected}
+      setHomeSelected={setHomeSelected}
+      aboutSelected={aboutSelected}
+      setAboutSelected={setAboutSelected}
+      workSelected={workSelected}
+      setWorkSelected={setWorkSelected}
+      contactSelected={contactSelected}
+      setContactSelected={setContactSelected}
+      resumeSelected={resumeSelected}
+      setResumeSelected={setResumeSelected}
+      />
       <Container style={{ paddingTop: "20px" }}>
-        <Router>
-          <Routes>
-            <Route path="/react-portfolio/" element={<Home />} />
-            <Route path="/react-portfolio/About" element={<About />} />
-            <Route path="/react-portfolio/Work" element={<Work />} />
-            <Route path="/react-portfolio/Contact" element={<Contact />} />
-            <Route path="/react-portfolio/Resume" element={<Resume />} />
-          </Routes>
-        </Router>
+        {homeSelected ? (
+          <>
+            <Home id="homePage" />
+          </>
+        ) : (aboutSelected ? (
+          <>
+            <About id="aboutPage"/>
+          </>
+        ) : (workSelected ? (
+          <>
+            <Work id="workPage"/>
+          </>
+        ) : (contactSelected ? (
+          <>
+            <Contact id="contactPage"/>
+          </>
+        ) : (resumeSelected ? (
+          <>
+            <Resume id="resumePage"/>
+          </>
+        ) : (
+          <Home id="homePage"/>
+        )))))
+        }
       </Container>
       <Footer />
     </div>
