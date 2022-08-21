@@ -31,7 +31,7 @@
           drop-shadow(0 25px 20px rgba(0,0,0,.15));
 }
 
-.contactInfo img:hover {
+.contactInfo:hover img {
   filter: invert(21%) 
           sepia(27%) 
           saturate(387%) 
@@ -47,67 +47,25 @@
 
 
 /* Nav */
-header {
-  padding: 0 0 2vw 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
-
 nav {
-  margin: 0;
-  padding: 2vw 0 1vw 0;
   background-color: var(--quaternary-color);
   opacity: .7;
-}
-
-header a {
-  text-decoration: none;
-  color: var(--tertiary-color);
-  margin: 0 2vw;
-  padding: 1vw 1.5vw;
-  font-weight: 400;
-  font-size: 4vw;
 }
 
 nav:hover {
   opacity: .95;
 }
 
-header a:hover {
-  color: var(--tertiary-color);
-  border-bottom: none;
-  box-shadow: 0 1px 0 rgba(0,0,0), 
-              0 5px 0 rgba(0,0,0),
-              0 10px 10px rgba(0,0,0,.25),
-              0 15px 10px rgba(0,0,0,.2),
-              0 25px 20px rgba(0,0,0,.15);
-  text-shadow: none;
-  border: 2px solid var(--tertiary-color);
-}
 
-header nav ul {
-  opacity: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-}
-
-
-/* Me  */
+/* Home  */
 .hero-jumbotron {
   display: block;
   width: 100%;
   color: var(--tertiary-color);
   align-items: center;
   justify-content: center;
+  background-color: var(--quaternary-color);
+  border-radius: 5vw;
 }
 
 .hero-jumbotron div {
@@ -123,7 +81,7 @@ header nav ul {
 }
 
 #hi {
-  font-size: 11vw;
+  font-size: 10vw;
 }
 
 #name {
@@ -137,39 +95,60 @@ header nav ul {
   text-align: center;
 }
 
-
-/* About Me */
-#about {
-  font-size: 9vw;
-  text-align: center;
-  color: var(--tertiary-color);
-}
-
-#aboutInfo {
-  font-size: 3.5vw;
+.welcomeInfo {
+  font-size: 2.5vw;
   text-align: justify;
 }
 
 
+/* About Me */
+#aboutInfo {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}
+
+#aboutInfo img {
+  margin: 2vw 0;
+  width: 55vw;
+  height: 50vw;
+  border-radius: 5vw;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+              rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+              rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+              rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+              rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+              rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+              rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+              rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+#aboutInfo div {
+  padding: 1vw;
+  font-size: 3vw;
+}
+
+.welcomeInfo h2 {
+  padding: 2vw;
+  font-size: 4vw;
+  color: var(--tertiary-color);
+  text-align: center;
+}
+
+
 /* Work */
-#work, #resume{
+#work, #resume, #ContactHeader, #about {
   text-align: center;
   color: var(--tertiary-color);
 }
 
-#work h2, #resume h2 {
+#work h2, #resume h2, #ContactHeader, #about {
   font-size: 10vw;
   margin: 0;
-}
-
-.sample {
-  height: 30vw;
-  width: 40vw;
-}
-
-.sampleText {
-  text-align: center;
-  padding: 5vw 0;
+  background-color: var(--quaternary-color);
+  border-radius: 5vw;
 }
 
 #work article {
@@ -178,20 +157,19 @@ header nav ul {
   justify-content: center;
 }
 
-.sampleText h3 {
-  font-size: 5vw;
-  padding: 1vw;
+.sampleText a {
+  text-decoration: none;
   color: var(--tertiary-color);
-  width: 70vw;
-  height: 10vw;
-  border-radius: 2vw 2vw 0 0;
+  font-size: 5vw;
+  padding: 0 2vw;
+}
+
+.sampleText a:hover {
+  color: var(--primary-color);
 }
 
 .sampleText p {
   font-size: 3.5vw;
-  width: 70vw;
-  height: 8vw;
-  border-radius: 0 0 2vw 2vw;
 }
 
 #travelot, #note-taker, #social-networking-nosql, #employee-tracker, #run-buddy {
@@ -200,13 +178,11 @@ header nav ul {
   margin: 2vw;
   width: 80vw;
   height: 30vw;
-  background-color: var(--quaternary-color);
-  background-blend-mode: multiply;
+  background-color: transparent;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   color: var(--secondary-color);
   border-radius: 5vw;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
@@ -219,12 +195,49 @@ header nav ul {
               rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-#travelot:hover, #note-taker:hover, #social-networking-nosql:hover, #employee-tracker:hover, #run-buddy:hover {
-  background-color: transparent;
+#travelot div, #note-taker div, #social-networking-nosql div, #employee-tracker div, #run-buddy div,
+#travelot p, #note-taker p, #social-networking-nosql p, #employee-tracker p, #run-buddy p  {
+  display: none;
 }
 
-#travelot:hover div, #note-taker:hover div, #social-networking-nosql:hover div, #employee-tracker:hover div, #run-buddy:hover div {
-  display: none;
+#travelot:hover, #note-taker:hover, #social-networking-nosql:hover, #employee-tracker:hover, #run-buddy:hover {
+  background-color: var(--quaternary-color);
+  background-blend-mode: multiply;
+}
+
+#travelot:hover div, #note-taker:hover div, #social-networking-nosql:hover div, #employee-tracker:hover div, #run-buddy:hover div,
+#travelot:hover p, #note-taker:hover p, #social-networking-nosql:hover p, #employee-tracker:hover p, #run-buddy:hover p {
+  display: contents;
+  text-decoration: none;
+}
+
+.gitLink img {
+  height: 8vw;
+  width: 8vw;
+  filter: invert(81%) sepia(17%) 
+          saturate(7007%) 
+          hue-rotate(357deg) 
+          brightness(89%) 
+          contrast(88%)
+          drop-shadow(0 1px 0 rgba(0,0,0)) 
+          drop-shadow(0 2px 0 rgba(0,0,0))
+          drop-shadow(0 10px 10px rgba(0,0,0,.25))
+          drop-shadow(0 15px 10px rgba(0,0,0,.2))
+          drop-shadow(0 25px 20px rgba(0,0,0,.15));
+}
+
+.gitLink img:hover {
+  filter: invert(21%) 
+          sepia(27%)
+          saturate(387%) 
+          hue-rotate(131deg) 
+          brightness(88%) 
+          contrast(85%)
+          drop-shadow(0 1px 0 rgba(0,0,0)) 
+          drop-shadow(0 2px 0 rgba(0,0,0))
+          drop-shadow(0 10px 10px rgba(0,0,0,.25))
+          drop-shadow(0 15px 10px rgba(0,0,0,.2))
+          drop-shadow(0 25px 20px rgba(0,0,0,.15));
 }
 
 #travelot {
@@ -251,7 +264,6 @@ header nav ul {
 
 /* Contact Me */
 .footer, .contactMe {
-  padding: 5vw;
   display: flex;
   justify-content: center;
 }
@@ -283,6 +295,57 @@ header nav ul {
   padding: 2vw;
 }
 
+#phone:hover, #email:hover {
+  color: var(--quaternary-color);
+}
+
+/* Contact Me Form */
+form div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form input {
+  margin: 1vw;
+  width: 50vw;
+  text-align: center;
+}
+
+form textarea {
+  width: 60vw;
+  text-align: center;
+}
+
+#formName {
+  margin: 1vw;
+  text-align: center;
+  width: 100%;
+}
+
+#formEmail {
+  margin: 1vw;
+  text-align: center;
+  width: 100%;
+}
+
+#formMessage {
+  margin: 1vw;
+  text-align: center;
+  width: 100%;
+}
+
+form button {
+  margin: 1vw 0 4vw 0;
+  color: var(--secondary-color);
+  background-color: var(--quaternary-color);
+}
+
+form button:hover {
+  color: var(--quaternary-color);
+  background-color: var(--tertiary-color);
+}
+
 
 /* Resume */
 #resume address {
@@ -291,21 +354,14 @@ header nav ul {
   justify-content: center;
 }
 
-#resumeInfo {
-  background-image: url(./assets/images/resume.png);
-  background-position: top;
-  background-size: cover;
+#resumeInfo img {
   margin: 2vw;
-  width: 85vw;
-  height: 160vw;
-  background-color: var(--quaternary-color);
-  background-blend-mode: multiply;
+  width: 80vw;
+  height: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  color: var(--secondary-color);
   border-radius: 5vw;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
               rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
@@ -315,20 +371,6 @@ header nav ul {
               rgba(0, 0, 0, 0.09) 0px 8px 4px, 
               rgba(0, 0, 0, 0.09) 0px 16px 8px, 
               rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-
-#resume h3 {
-  height: 40vw;
-  width: 70vw;
-  font-size: 12vw;
-}
-
-#resumeInfo:hover {
-  background-color: transparent;
-}
-
-#resumeInfo:hover div {
-  display: none;
 }
 
 
@@ -342,7 +384,6 @@ header nav ul {
 
   /* Me  */
   .hero-jumbotron {
-      background-color: var(--quaternary-color);
       display: flex;
       flex-wrap: wrap;
   }
@@ -352,18 +393,18 @@ header nav ul {
   }
 
   #memoji {
-      height: 40vw;
-      width: 40vw;
+      height: 30vw;
+      width: 30vw;
   }
 
   #hi {
-      font-size: 5vw;
+      font-size: 4.5vw;
       margin-bottom: 0;
   }
 
   #name {
       margin-bottom: 0;
-      font-size: 8vw;
+      font-size: 7vw;
   }
   
   #job {
@@ -372,46 +413,48 @@ header nav ul {
       font-size: 2vw;
   }
 
-
-  /* About Me */
-  #about {
-      font-size: 5vw;
+  .welcomeInfo {
+    font-size: 2vw;
   }
 
-  #aboutInfo {
-      font-size: 2vw;
+
+  /* About Me */
+  #aboutInfo img {
+    width: 35vw;
+    height: 30vw;
+  }
+  
+  #aboutInfo div {
+    font-size: 2vw;
   }
 
 
   /* Work */
-  .sampleText{
-      padding: 2vw 0;
-  }
-
-  #work h2, #resume h2 {
+  #work h2, #resume h2, #ContactHeader, #about {
       font-size: 6vw;
   }
 
-  .sampleText h3 {
-      font-size: 3vw;
-      padding: 2vw;
-      width: 40vw;
-      height: 6vw;
+  .sampleText a {
+      font-size: 1.5vw;
+      padding: 0 1vw;
   }
 
   .sampleText p {
-      font-size: 2vw;
-      width: 40vw;
-      height: 5vw;
+      font-size: 1.2vw;
   }
 
   #travelot, #note-taker, #social-networking-nosql, #employee-tracker, #run-buddy {
-      width: 40vw;
+      width: 30vw;
       height: 15vw;
   }
 
   #travelot {
-      width: 84vw;
+      width: 64vw;
+  }
+
+  .gitLink img {
+    height: 4vw;
+    width: 4vw;
   }
 
 
@@ -430,17 +473,12 @@ header nav ul {
     height: 8vw;
   }
 
-
-  /* Resume */
-  #resumeInfo {
-      width: 85vw;
-      height: 50vw;
+  form input {
+    width: 35vw;
   }
-
-  #resume h3 {
-      height: 18vw;
-      width: 40vw;
-      font-size: 6vw;
+  
+  form textarea {
+    width: 50vw;
   }
 }
 
@@ -461,51 +499,49 @@ header nav ul {
 
   /* Me  */
   #memoji {
-      height: 35vw;
-      width: 35vw;
+      height: 28vw;
+      width: 28vw;
   }
 
   #hi {
-      font-size: 4.5vw;
+      font-size: 4.25vw;
   }
 
   #name {
-      font-size: 7vw;
+      font-size: 6vw;
   }
   
   #job {
-      font-size: 1.75vw;
+      font-size: 1.5vw;
   }
 
 
   /* About Me */
-  #about {
-      font-size: 4vw;
+  #aboutInfo {
+      flex-wrap: nowrap;
+  }
+  
+  #aboutInfo div {
+    font-size: 1.25vw;
   }
 
-  #aboutInfo {
-      font-size: 1.7vw;
+  .welcomeInfo {
+    font-size: 1.75vw;
   }
 
 
   /* Work */
-  .sampleText {
-      padding: 0;
-  }
-
-  #work h2, #resume h2 {
+  #work h2, #resume h2, #ContactHeader, #about {
       padding: 1vw;
       font-size: 4vw;
   }
 
-  .sampleText h3 {
-      font-size: 2.5vw;
-      height: 5vw;
+  .sampleText a {
+      font-size: 1.75vw;
   }
 
   .sampleText p {
-      font-size: 2vw;
-      height: 4vw;
+      font-size: 1.25vw;
   }
 
   #travelot, #note-taker, #social-networking-nosql, #employee-tracker, #run-buddy {
@@ -517,15 +553,12 @@ header nav ul {
   }
 
 
-  /* Resume */
-  #resumeInfo {
-      width: 85vw;
-      height: 35vw;
+  /* Contact Me */
+  form input {
+    width: 20vw;
   }
-
-  #resume h3 {
-      height: 15vw;
-      width: 30vw;
-      font-size: 4vw;
+  
+  form textarea {
+    width: 35vw;
   }
 }

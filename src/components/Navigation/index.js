@@ -8,7 +8,7 @@ const Navigation = (props) => {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
         <Container>
           <Navbar.Brand href="/">Kyle Bort</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
