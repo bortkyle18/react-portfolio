@@ -7,7 +7,7 @@ const Footer = (props) => {
 
   return (
     <>
-      <address className="footer">
+      <address className="footer" id="footer">
         <div className="contact">
           <a href="https://github.com/bortkyle18" target="_blank" rel="noreferrer" id="git" className="contactInfo">
             <img src={ gitHub } alt="github logo"/>

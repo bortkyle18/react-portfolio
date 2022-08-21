@@ -6,7 +6,7 @@ const Home = (props) => {
 
   return (
     <>
-      <section className="hero-jumbotron">
+      <section className="hero-jumbotron" id="home">
         <div>
             <img id="memoji" src={ memoji } alt="Kyle Bort Memoji"/>
         </div>
