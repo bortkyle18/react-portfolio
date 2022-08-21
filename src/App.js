@@ -1,5 +1,5 @@
 import './index.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Container from "react-bootstrap/Container"
 import Navigation from "./components/Navigation"
 import Home from "./components/Home"
@@ -17,13 +17,13 @@ function App() {
       <Navigation />
       <Container style={{ paddingTop: "20px" }}>
         <Router>
-          <Switch>
+          <Routes>
             <Route path="/react-portfolio/" element={<Home />} />
             <Route path="/react-portfolio/About" element={<About />} />
             <Route path="/react-portfolio/Work" element={<Work />} />
             <Route path="/react-portfolio/Contact" element={<Contact />} />
             <Route path="/react-portfolio/Resume" element={<Resume />} />
-          </Switch>
+          </Routes>
         </Router>
       </Container>
       <Footer />
