@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.287dc3e7.css",
+    "main.js": "/react-portfolio/static/js/main.515d5092.js",
+    "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/run-buddy.png": "/react-portfolio/static/media/run-buddy.b3e084d510bd7a1b5191.png",
+    "static/media/resume.png": "/react-portfolio/static/media/resume.a37bf69e64300fe5530a.png",
+    "static/media/me.jpg": "/react-portfolio/static/media/me.60c3bf5264f22188ecc2.jpg",
+    "static/media/social-networking-nosql.png": "/react-portfolio/static/media/social-networking-nosql.09e7e1396a3a083254e9.png",
+    "static/media/note-taker.png": "/react-portfolio/static/media/note-taker.d716f4ca8f48f84bb3e0.png",
+    "static/media/memoji-laptop.png": "/react-portfolio/static/media/memoji-laptop.2e5b005e9ac8a0c5a610.png",
+    "static/media/travelot.png": "/react-portfolio/static/media/travelot.109ac14aa491900dc921.png",
+    "static/media/employee-tracker.png": "/react-portfolio/static/media/employee-tracker.64738b1fc7d096702752.png",
+    "static/media/email.png": "/react-portfolio/static/media/email.b830aff3b8872979c182.png",
+    "static/media/github.png": "/react-portfolio/static/media/github.8e6bce7f8e7b5ad90736.png",
+    "index.html": "/react-portfolio/index.html",
+    "main.287dc3e7.css.map": "/react-portfolio/static/css/main.287dc3e7.css.map",
+    "main.515d5092.js.map": "/react-portfolio/static/js/main.515d5092.js.map",
+    "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.287dc3e7.css",
+    "static/js/main.515d5092.js"
+  ]
+}
