@@ -16,7 +16,7 @@ function App() {
     <div>
       <Navigation />
       <Container style={{ paddingTop: "20px" }}>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
